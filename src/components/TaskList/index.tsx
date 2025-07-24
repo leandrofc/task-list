@@ -13,12 +13,13 @@ const TaskList = () => {
     return (
         <div className="flex flex-1 flex-col gap-3 overflow-y-auto mt-6 mb-6 p-3 items-center bg-gray-100 w-full border border-dashed rounded-xl border-gray-300 md:max-w-[493px]">
             {
-                filteredTasks?.map(({id, title, createdAt, completedAt}) => (
+                filteredTasks?.map(({id, title, createdAt, completedAt}, index) => (
                     <TaskItem
                         key={id}
                         title={title}
                         date={`${createdAt} - ${completedAt}`}
                         isCompleted={!!completedAt}
+                        index={index}
                     />
                 ))
             }
