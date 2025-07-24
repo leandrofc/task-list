@@ -28,6 +28,12 @@ export default {
         transparent: "transparent",
         current: "currentColor",
       },
+      fontSize:{
+        sm: 10,
+        md: 15,
+        lg: 16,
+        xl: 36
+      },
       extend: {
         fontFamily: {
           sans: ["Inter", "Arial", "sans-serif"],
