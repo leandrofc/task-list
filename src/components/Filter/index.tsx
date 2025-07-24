@@ -1,31 +1,31 @@
-import { useState } from "react";
 import { Button } from "../Button";
+import { useTaskList } from "../../context/TaskListContext";
 
 const Filter = () => {
-    const [selected, setSelected] = useState(1);
+    const { filter, setFilter } = useTaskList();
 
     return (
         <div className="flex gap-4">
             <Button
                 text="All"
-                onClick={() => {setSelected(1)}}
+                onClick={() => setFilter('all')}
                 variant="ghost"
                 size="small"
-                isSelected={selected === 1}
+                isSelected={filter === "all"}
             />
             <Button
                 text="Active"
-                onClick={() => {setSelected(2)}}
+                onClick={() => setFilter('active')}
                 variant="ghost"
                 size="small"
-                isSelected={selected === 2}
+                isSelected={filter === "active"}
             />
             <Button
                 text="Completed"
-                onClick={() => {setSelected(3)}}
+                onClick={() => setFilter('completed')}
                 variant="ghost"
                 size="small"
-                isSelected={selected === 3}
+                isSelected={filter === "completed"}
             />
         </div>
     )
