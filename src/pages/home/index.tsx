@@ -4,10 +4,10 @@ import TaskList from "../../components/TaskList";
 
 const Home = () => {
     return (
-      <div className="h-screen flex flex-col p-6">
-        <Header />
-        <TaskList />
-        <Footer />
+      <div className="h-screen flex flex-col p-6 md:items-center">
+          <Header />
+          <TaskList />
+          <Footer />
       </div>
     )
 }
