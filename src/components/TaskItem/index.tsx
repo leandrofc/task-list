@@ -5,7 +5,7 @@ import Toggle from "../Toggle";
 
 const TaskItem = ({ title, date, isCompleted }: TaskItemProps) => {
     return (
-      <div className="flex justify-between w-[354px] p-3 rounded-xl shadow-[1px_2px_3.8px_0px_rgba(0,0,0,0.09)]">
+      <div className="flex justify-between w-full p-3 rounded-xl shadow-[1px_2px_3.8px_0px_rgba(0,0,0,0.09)]">
         <div className="flex items-center gap-3 h-11">
             <div className={`w-3 h-full rounded-l-md ${isCompleted ? "bg-green-100": "bg-orange-100"}`} />
             <div className="flex flex-col">
