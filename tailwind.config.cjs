@@ -5,6 +5,29 @@ export default {
       "./src/**/*.{js,ts,jsx,tsx}"
     ],
     theme: {
+      colors: {
+        white: "#ffffff",
+        black: "#000000",
+        gray: {
+          900: "#6C7381",
+          700: "#CDCDCD",
+          300: "#E5E7EB",
+          100: "#FCFCFD",
+        },
+        blue: {
+          700: "#0084C7",
+          100: "#E6F4FE",
+        },
+        green: {
+          700: "#0E9F1F",
+          100: "#EBF6F1",
+        },
+        orange: {
+          100: "#FFF2E7",
+        },
+        transparent: "transparent",
+        current: "currentColor",
+      },
       extend: {
         fontFamily: {
           sans: ["Inter", "Arial", "sans-serif"],
