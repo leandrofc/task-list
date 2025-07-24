@@ -1,10 +1,13 @@
-function App() {
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/home'
+
+const App = () => {
   return (
-    <>
-      <div>
-        <p>Hello World</p>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
