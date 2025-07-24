@@ -12,13 +12,13 @@ const taskList: TaskType[] = [
     {
         id: "1",
         title: "Study",
-        createdAt: "22/07/2025",
-        completedAt: "23/07/2025",
+        createdAt: "2025-07-24T23:09:08.675Z",
+        completedAt: "2025-07-24T23:09:08.675Z",
     },
     {
         id: "2",
         title: "Go to the gym",
-        createdAt: "22/07/2025",
+        createdAt: "2025-07-24T23:09:08.675Z",
         completedAt: null,
     },
 ];
