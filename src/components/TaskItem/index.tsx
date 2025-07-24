@@ -4,7 +4,7 @@ import Toggle from "../Toggle";
 import { useTaskList } from "../../context/TaskListContext";
 
 
-const TaskItem = ({ title, date, isCompleted, index }: TaskItemProps) => {
+const TaskItem = ({ title, date, isCompleted, index, id }: TaskItemProps) => {
     const { tasks, setTasks } = useTaskList();
 
     const handleDragStart = (e: React.DragEvent) => {
@@ -45,7 +45,7 @@ const TaskItem = ({ title, date, isCompleted, index }: TaskItemProps) => {
             </div>
         </div>
 
-        <Toggle isSelected={isCompleted} />
+        <Toggle id={id} isSelected={isCompleted}  />
 
       </div>
     )

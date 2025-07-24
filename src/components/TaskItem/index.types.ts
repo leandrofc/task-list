@@ -3,4 +3,5 @@ export default interface TaskItemProps {
     date: string;
     isCompleted?: boolean;
     index: number;
+    id: string;
 }
