@@ -1,14 +1,15 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import TaskList from "../../components/TaskList";
+import { TaskListProvider } from "../../context/TaskListContext";
 
 const Home = () => {
     return (
-      <div className="h-screen flex flex-col p-6 md:items-center">
-          <Header />
-          <TaskList />
-          <Footer />
-      </div>
+      <TaskListProvider>
+        <TaskList>
+          <TaskList.Header />
+          <TaskList.List />
+          <TaskList.Footer />
+        </TaskList>
+      </TaskListProvider>
     )
 }
 
