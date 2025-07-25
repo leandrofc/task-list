@@ -37,6 +37,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
     <div
         className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/80"
         onClick={handleOverlayClick}
+        role="dialog"
     >
         <div
             className="flex flex-col gap-4 bg-white w-full max-w-md p-6 py-16 m-3 rounded-xl relative"
