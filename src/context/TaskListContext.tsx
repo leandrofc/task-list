@@ -3,7 +3,7 @@ import type { TaskType } from '../types/task';
 import { taskList } from '../data/taskList';
 import type { TaskContextType } from '../types/taskContextTypes';
 
-const TaskListContext = createContext<TaskContextType | undefined>(undefined);
+export const TaskListContext = createContext<TaskContextType | undefined>(undefined);
 
 export const TaskListProvider = ({ children }: { children: ReactNode }) => {
   const [tasks, setTasks] = useState<TaskType[]>(taskList);
