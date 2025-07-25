@@ -14,13 +14,13 @@ jest.mock('../Modal', () => ({
 }));
 
 describe('Footer component', () => {
-  it('renderiza o botão corretamente', () => {
+  it('renders the button correctly', () => {
     render(<Footer />);
     const button = screen.getByRole('button', { name: /add new task/i });
     expect(button).toBeInTheDocument();
   });
 
-  it('abre o modal ao clicar no botão', () => {
+  it('opens the modal when clicking the button', () => {
     render(<Footer />);
     const button = screen.getByRole('button', { name: /add new task/i });
 
@@ -31,7 +31,7 @@ describe('Footer component', () => {
     expect(screen.getByText(/modal aberto/i)).toBeInTheDocument();
   });
 
-  it('fecha o modal ao clicar em "Fechar"', () => {
+  it('closes the modal when clicking "Close"', () => {
     render(<Footer />);
     const button = screen.getByRole('button', { name: /add new task/i });
 
