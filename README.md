@@ -16,7 +16,7 @@ The application provides core features such as:
 
 The entire app layout was designed using **Figma**.  
 You can view the design here:  
-👉 [Figma Project Link](https://www.figma.com/design/ffcS9ZL5vOtn8o3vxCDTbZ/Untitled?node-id=996-158&t=GXZtDh9uZoGBtReA-1)
+👉 [Figma Project Link](https://www.figma.com/design/ffcS9ZL5vOtn8o3vxCDTbZ/Untitled?node-id=992-2&t=ZwuxkFwMaNyjDNDF-1)
 
 ### Mobile View
 
