@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Input from '../Input';
 import { Button } from '../Button';
 import Title from '../Title';
 import { X } from "react-feather";
 import type { ModalProps } from './index.types';
+import { useTaskList } from '../../context/TaskListContext';
 
 const Modal = ({ isOpen, onClose }: ModalProps) => {
   if (!isOpen) return null;
 
+  const [title, setTitle] = useState('');
+
+  const { addTask } = useTaskList();
+
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const trimmedTitle = title.trim();
+    if (!trimmedTitle) return;
+
+    addTask(trimmedTitle);
+    setTitle('');
+    onClose();
   };
 
   const handleOverlayClick = () => {
@@ -35,9 +47,16 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
                 <Title text="Add new task" />
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <Input label="Task name" />
+                <Input
+                    label="Task name"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
                 <div className="flex justify-end">
-                    <Button text="Add task" onClick={() => {}} />
+                    <Button
+                        text="Add task"
+                        type="submit"
+                    />
                 </div>
             </form>
         </div>
