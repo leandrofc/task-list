@@ -8,6 +8,7 @@ const TaskItem = ({ title, date, isCompleted, index, id }: TaskItemProps) => {
     const { tasks, setTasks } = useTaskList();
 
     const handleDragStart = (e: React.DragEvent) => {
+        e.dataTransfer.effectAllowed = "move";
         e.dataTransfer.setData('text/plain', String(index));
     };
 
