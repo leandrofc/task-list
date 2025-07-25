@@ -59,6 +59,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
                     onChange={(e) => setTitle(e.target.value)}
                     ref={inputRef}
                     aria-label="Enter the task name"
+                    id="task-name"
                 />
                 <div className="flex justify-end">
                     <Button
