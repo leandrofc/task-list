@@ -1,6 +1,6 @@
 import { Check } from "react-feather";
 import type ToggleProps from "./index.types";
-import { useTaskList } from "../../context/TaskListContext";
+import { useTaskList } from "../../context/taskListContext";
 
 const Toggle = ({ isSelected, id  }: ToggleProps) => {
     const { setTasks } = useTaskList();

@@ -1,5 +1,5 @@
 import TaskList from "../../components/TaskList";
-import { TaskListProvider } from "../../context/TaskListContext";
+import { TaskListProvider } from "../../context/taskListContext";
 
 const Home = () => {
     return (

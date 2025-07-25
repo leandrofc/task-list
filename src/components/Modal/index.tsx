@@ -4,7 +4,7 @@ import { Button } from '../Button';
 import Title from '../Title';
 import { X } from "react-feather";
 import type { ModalProps } from './index.types';
-import { useTaskList } from '../../context/TaskListContext';
+import { useTaskList } from '../../context/taskListContext';
 
 const Modal = ({ isOpen, onClose }: ModalProps) => {
   if (!isOpen) return null;
@@ -12,7 +12,6 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
   const [title, setTitle] = useState('');
 
   const { addTask } = useTaskList();
-
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

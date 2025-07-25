@@ -1,7 +1,7 @@
 import { Calendar } from "react-feather";
 import type TaskItemProps from "./index.types";
 import Toggle from "../Toggle";
-import { useTaskList } from "../../context/TaskListContext";
+import { useTaskList } from "../../context/taskListContext";
 
 
 const TaskItem = ({ title, date, isCompleted, index, id }: TaskItemProps) => {
