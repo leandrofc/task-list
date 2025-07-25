@@ -23,7 +23,7 @@ const TaskItem = ({ title, date, isCompleted, index, id }: TaskItemProps) => {
 
     return (
         <div
-            className="flex justify-between w-full p-3 rounded-xl shadow-[1px_2px_3.8px_0px_rgba(0,0,0,0.09)]"
+            className="flex justify-between w-full p-3 rounded-xl shadow-[1px_2px_3.8px_0px_rgba(0,0,0,0.09)] cursor-grab active:cursor-grabbing"
             draggable
             onDragStart={handleDragStart}
             onDragOver={(e) => e.preventDefault()}
