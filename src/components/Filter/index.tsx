@@ -12,6 +12,7 @@ const Filter = () => {
                 variant="ghost"
                 size="small"
                 isSelected={filter === "all"}
+                aria-label="View all tasks"
             />
             <Button
                 text="Active"
@@ -19,6 +20,7 @@ const Filter = () => {
                 variant="ghost"
                 size="small"
                 isSelected={filter === "active"}
+                aria-label="View active tasks"
             />
             <Button
                 text="Completed"
@@ -26,6 +28,7 @@ const Filter = () => {
                 variant="ghost"
                 size="small"
                 isSelected={filter === "completed"}
+                aria-label="View completed tasks"
             />
         </div>
     )

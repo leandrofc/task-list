@@ -45,6 +45,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
             <button
                 onClick={onClose}
                 className="absolute top-6 right-6 text-gray-500 hover:text-gray-800"
+                aria-label="Close modal"
             >
                 <X size={24} />
             </button>
@@ -57,11 +58,13 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     ref={inputRef}
+                    aria-label="Enter the task name"
                 />
                 <div className="flex justify-end">
                     <Button
                         text="Add task"
                         type="submit"
+                        aria-label="Add task"
                     />
                 </div>
             </form>

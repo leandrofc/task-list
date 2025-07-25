@@ -11,6 +11,7 @@ const Footer = () => {
                 text="Add new task"
                 onClick={() => setIsModalOpen(true)}
                 variant="primary"
+                aria-label="Add new task"
             />
             <Modal
                 isOpen={isModalOpen}

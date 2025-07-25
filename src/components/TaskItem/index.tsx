@@ -45,7 +45,7 @@ const TaskItem = ({ title, date, isCompleted, index, id }: TaskItemProps) => {
             </div>
         </div>
 
-        <Toggle id={id} isSelected={isCompleted}  />
+        <Toggle id={id} title={title} isSelected={isCompleted}  />
 
       </div>
     )
