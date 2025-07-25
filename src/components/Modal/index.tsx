@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Input from '../Input';
 import { Button } from '../Button';
 import Title from '../Title';
@@ -10,6 +10,8 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
   if (!isOpen) return null;
 
   const [title, setTitle] = useState('');
+
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const { addTask } = useTaskList();
 
@@ -26,6 +28,10 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
   const handleOverlayClick = () => {
     onClose();
   };
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   return (
     <div
@@ -50,6 +56,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
                     label="Task name"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    ref={inputRef}
                 />
                 <div className="flex justify-end">
                     <Button
