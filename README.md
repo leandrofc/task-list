@@ -1,69 +1,101 @@
-# React + TypeScript + Vite
+# Task List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
 
-Currently, two official plugins are available:
+**Task List** is a modern and responsive to-do list application built with React and TypeScript. It allows users to manage their daily tasks efficiently with an intuitive and accessible interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application provides core features such as:
 
-## Expanding the ESLint configuration
+- Adding, completing, and filtering tasks by status (All, Active, Completed)
+- Drag-and-drop reordering of tasks for better organization
+- Real-time updates using local state management with React hooks
+- A clean and mobile-first UI built with Tailwind CSS
+- Accessibility enhancements with ARIA attributes and keyboard support
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Figma Design
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The entire app layout was designed using **Figma**.  
+You can view the design here:  
+👉 [Figma Project Link](https://www.figma.com/design/ffcS9ZL5vOtn8o3vxCDTbZ/Untitled?node-id=996-158&t=GXZtDh9uZoGBtReA-1)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Mobile View
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+![Mobile mockup](./readme-assets/mobileMockup.png)
+
+### Desktop View
+
+![Desktop mockup](./readme-assets/desktopMockup.png)
+
+## Features
+
+- **Compound Component Pattern** with shared state via React Context.
+- **Local State Management** using `useState`.
+- **Performance Optimization** with `useCallback` and `useMemo`.
+- **Drag-and-Drop** functionality for reordering tasks.
+- **Task Filtering** (All, Active, Completed).
+- **Accessibility** (ARIA roles, keyboard navigation).
+- **Responsive Layout** using Tailwind CSS (Mobile First).
+- **Unit Testing** using React Testing Library and Jest.
+
+## Technologies Used
+
+- **React 19**
+- **React Router DOM 7**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Jest**
+- **React Testing Library**
+- **React Feather Icons**
+- **ESLint & TypeScript ESLint**
+
+## Installation:
+
+To run the project locally, follow the steps below:
+
+### 1. Prerequisites
+
+Before running this project locally, make sure you have the following installed:
+
+- **Node.js** (v18 or later) — [Download here](https://nodejs.org/)
+- **npm** (comes with Node.js) or **yarn**
+- A modern code editor like [Visual Studio Code](https://code.visualstudio.com/)
+
+You can verify your versions by running:
+
+```bash
+node -v
+npm -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Clone the repository
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/leandrofc/task-list.git
+```
+
+### 3. Access the project directory:
+
+```sh
+cd task-list
+```
+
+### 4. Install dependencies
+
+```bash
+npm install
+```
+
+### 5. Start the development server
+
+```bash
+npm run dev
+```
+
+## Running Tests:
+
+To run the unit tests:
+```bash
+npm run test
 ```
